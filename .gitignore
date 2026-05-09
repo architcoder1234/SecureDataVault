@@ -1,0 +1,18 @@
+.env
+    *.db
+    *.pem
+    __pycache__/
+    *.docx
+    *.zip
+    ```
+3.  Remove the sensitive files from the Git index (this won't delete them from your computer):
+    
+```bash
+    git rm -r --cached backend/.env backend/vault.db backend/*.pem backend/__pycache__
+    git commit -m "Remove sensitive files and binaries from tracking"
+    ```
+
+### Why the "fish" errors happened?
+It looks like you copied the Markdown formatting (the backticks 
+``` and the bullet points) into your terminal. The `fish` shell tried to execute those words as commands. Only copy the specific lines starting with `git`.
+
